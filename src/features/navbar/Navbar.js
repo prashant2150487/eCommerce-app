@@ -13,6 +13,7 @@ import {
   XMarkIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const user = {
   name: "Tom Cook",
@@ -40,14 +41,7 @@ function classNames(...classes) {
 export default function Navbar({ children }) {
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
+      
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -82,14 +76,19 @@ export default function Navbar({ children }) {
               </div>
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
-                  <button
-                    type="button"
-                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
-                    <ShoppingCartIcon aria-hidden="true" className="h-6 w-6 " />
-                  </button>
+                  <Link to="/cart">
+                    <button
+                      type="button"
+                      className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    >
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">View notifications</span>
+                      <ShoppingCartIcon
+                        aria-hidden="true"
+                        className="h-6 w-6 "
+                      />
+                    </button>
+                  </Link>
                   <span className="inline-flex items-center rounded-full bg-yellow-50 mb-7  z-9 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
                     3
                   </span>
@@ -179,16 +178,18 @@ export default function Navbar({ children }) {
                     {user.email}
                   </div>
                 </div>
-                <button
-                  type="button"
-                  className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
-                </button>
-                <span className="inline-flex items-center rounded-full mb-5 ml-1 bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
-                  3
-                </span>
+                <Link to="/cart">
+                  <button
+                    type="button"
+                    className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  >
+                    <span className="absolute -inset-1.5" />
+                    <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+                  </button>
+                  <span className="inline-flex items-center rounded-full mb-5 ml-1 bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                    3
+                  </span>
+                </Link>
               </div>
               <div className="mt-3 space-y-1 px-2">
                 {userNavigation.map((item) => (
