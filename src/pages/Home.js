@@ -1,11 +1,11 @@
 import React from "react";
-import ProductList from "../features/product-list/ProductList";
 import Navbar from "../features/navbar/Navbar";
+import ProductList from "../features/product-list/components/ProductList";
 
 function Home() {
   return (
     <Navbar>
-      <ProductList />
+      <ProductList/>
     </Navbar>
   );
 }

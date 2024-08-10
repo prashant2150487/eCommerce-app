@@ -9,7 +9,6 @@ import {
 } from "@headlessui/react";
 import {
   Bars3Icon,
-  BellIcon,
   XMarkIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
@@ -41,7 +40,6 @@ function classNames(...classes) {
 export default function Navbar({ children }) {
   return (
     <>
-      
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
