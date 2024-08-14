@@ -34,7 +34,7 @@ const product = {
     { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
     { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
   ],
-  sizes: [
+  sizes: [  
     { name: 'XXS', inStock: false },
     { name: 'XS', inStock: true },
     { name: 'S', inStock: true },
